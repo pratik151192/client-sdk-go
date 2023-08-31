@@ -23,7 +23,7 @@ var (
 func main() {
 	ctx = context.Background()
 	cacheName = "test_batch_get"
-	credentialProvider, err := auth.FromString("eyJhcGlfa2V5IjoiZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKemRXSWlPaUp3Y21GMGFXdEFiVzl0Wlc1MGIyaHhMbU52YlNJc0luWmxjaUk2TVN3aWNDSTZJaUo5Lmk3Nkg0amwwSzlGV2c4dVhpeE9aMkZkcEdOczdHVnc0Y3lvWkd5MEFvV1UiLCJlbmRwb2ludCI6ImNlbGwtYWxwaGEtZGV2LnByZXByb2QuYS5tb21lbnRvaHEuY29tIn0=")
+	credentialProvider, err := auth.FromEnvironmentVariable("MOMENTO_AUTH_TOKEN")
 	if err != nil {
 		panic(err)
 	}
